@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Framework CSS</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/organico.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="background">
+    <div class="timer">
+      <div>
+        PREÇO DE LANÇAMENTO TERMINA EM 
+        <div class="timer__days">
+          <span class="days"></span> : <span class="hours"></span> : <span class="minutes"></span> : <span class="seconds"></span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <section class="linha">
+        <div class="doze colunas">
+          <header class="header">
+            <h5 class="curso__name--small">CURSO DE</h5>
+            <div class="curso__container">
+              <h1 class="curso__name">FRAMEWORK CSS</h1>
+              <span class="curso__lancamento">LANÇA.<br>7/NOV</span>
+            </div>
+            <h4 class="curso__destaque">Melhore seu nível de CSS</h4>
+            <h4 class="curso__destaque">Construa um framework CSS do zero</h4>
+            <button class="botao destacado laranja" id="startVideo">VEJA O VÍDEO DE APRESENTAÇÃO</button>
+          </header>
+        </div>
+      </section>
+    </div>
+
+    <section class="secao--full">
+      <div class="container">
+        <section class="linha">
+          <div class="seis colunas">
+            <img src="img/mock.png" class="u-width-100">
+          </div>
+          <div class="seis colunas">
+            <h2>É hora de melhorar seu CSS</h2>
+            <p>Com foco na <strong>simplicidade</strong>, neste curso você vai criar um <strong>framework CSS</strong> e um site sem perder tempo!</p>
+            <p>Juntos, vamos recriar o framework <strong><a href="https://estevanmaito.github.io/organico/" target="_blank">Orgânico CSS</a></strong>, uma ferramenta real para criar layouts responsivos. Além disso, vamos construir uma página completa com elementos como navegação, formulário, galeria e tabelas de preços.</p>
+            <p>Você pode <a href="https://github.com/estevanmaito/" target="_blank">ver o framework pronto</a>, <a href="amazon.co.uk" target="_blank">o site completo</a> ou <strong><a href="#comprar">inscrever-se no curso</a></strong> caso já esteja convencido.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <div class="container--flex">
+      <section class="linha secao">
+        <div class="tres colunas">
+          <img src="img/autor.png" alt="Foto do Estevan Maito" class="u-width-100">
+        </div>
+        <div class="nove colunas">
+          <h2>Conheça o Estevan Maito</h2>
+          <p>Estevan Maito é desenvolvedor full stack, escritor e tem um canal no YouTube. Trabalha como desenvolvedor web independente, escreveu o livro <a href="http://www.aprendahtmlecss.com.br" target="_blank">Aprenda HTML e CSS</a> e também cria <a href="https://youtube.com/estevanmaito" target="_blank">vídeos</a> sobre diversos temas que envolvem o desenvolvimento web, do front ao back end.</p>
+          <a href="https://twitter.com/estevanmaito" class="twitter-follow-button" data-show-count="false">Follow @estevanmaito</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </section>
+    </div>
+
+    <div class="container--flex">
+      <div class="faq">
+        <h2 class="faq__title">O que eu vou aprender?</h2>
+        <ul>
+          <li>Como usar o Emmet para escrever menos código e produzir mais</li>
+          <li>Atualizar o navegador em tempo real com LiveReload</li>
+          <li>Como funcionam os frameworks CSS por baixo dos panos</li>
+          <li>Criar grids responsivos</li>
+          <li>Escrever código semântico</li>
+          <li>Unificar o estilo de todos os navegadores com resets</li>
+          <li>Usar as vantagens do Flexbox antes de todos</li>
+          <li>Criar componentes reutilizáveis</li>
+        </ul>
+      </div>
+      <div class="faq">
+        <h2 class="faq__title">Para quem é este curso?</h2>
+        <p>Qualquer pessoa que procure avançar no entendimento de CSS (conheça o básico de HTML e CSS) para desenvolver layouts responsivos. Se você já tem experiência com HTML e CSS vai simplesmente completar o curso mais rápido.</p>
+        <ul>
+          <li>Desenvolvedores que utilizam frameworks como Bootstrap e queiram saber como tudo funciona por trás das classes</li>
+          <li>Desenvolvedores preocupados em acompanhar as práticas modernas de layout que estão sendo adotadas</li>
+          <li>Qualquer pessoa que queira melhorar seu nível de CSS e aprender como criar suas próprias ferramentas, usando conceitos básicos e avançados na prática</li>
+          <li>Designers e desenvolvedores interessados em saber como criar sites responsivos</li>
+        </ul>
+      </div>
+    </div>
+    
+
+    <div class="secao--full">
+      <div class="container">
+        <section class="linha">
+          <div class="doze colunas">
+            <div class="modulo">
+              <h2 class="modulo__titulo">Módulos do curso</h2>
+              <p>Em 2 horas, cada vídeo aprofunda um detalhe específico do projeto.</p>
+              <p>Direto ao ponto e sem deixar passar nada sem explicação.</p>
+            </div>
+            <ol class="video-list">
+              <li class="card" v-for="modulo in modulos">
+                <img src="img/framework-css.png" class="u-width-100 card__image">
+                <h6 class="card__title">{{ modulo.titulo }}</h6>
+                <span class="card__number">{{ modulo.n }}</span>
+              </li>
+            </ol>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="container--flex">
+      <div class="secao comprar" id="comprar">
+        <ul>
+          <li class="comprar__item">Acesso ilimitado a 33 vídeos <strong>Full HD</strong></li>
+          <li class="comprar__item">Atualizações ilimitadas</li>
+          <li class="comprar__item">Código fonte de tudo</li>
+          <li class="comprar__item">Acessível de qualquer dispositivo</li>
+        </ul>
+        <a href="https://pay.hotmart.com/X4961824S" class="botao destacado laranja u-width-100 comprar__botao">COMPRAR | <span class="comprar__botao--strike">R$ 68</span> R$ 36</a>
+        <span class="comprar__expira">Preço de lançamento - expira em <strong>07-11-2016 23:59</strong></span>
+      </div>
+    </div>
+
+    <div class="secao--full">
+      <div class="container">
+        <div class="linha">
+          <div class="doze colunas">
+            <h2>Ainda tem alguma dúvida?</h2>
+            <p>Me envia um e-mail ejmaito+feedback @ gmail.com</p>
+            <p>Me chama no Telegram @estevanmaito</p>
+            <p>Me chama no Twitter <a href="https://twitter.com/estevanmaito" target="_blank">@estevanmaito</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="modal">
+    <div class="video">
+      <span class="video__close"></span>
+      <div class="video__responsivo">
+        <iframe src="https://www.youtube.com/watch?v=6U1PnVqyJpU" allowfullscreen class="video__responsivo-frame"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function(e) {
+        const modal = document.querySelector('.modal');
+        const modalCloseBtn = document.querySelector('.video__close')
+        const startVideoBtn = document.querySelector('#startVideo');
+
+        const video = document.querySelector('.video__responsivo-frame');
+        const videoSrc = video.src;
+
+        startVideoBtn.addEventListener('click', function(e) {
+            modal.classList.add('open');
+        }, false);
+
+        modalCloseBtn.addEventListener('click', function(e) {
+            modal.classList.remove('open');
+            video.setAttribute('src', '');
+            video.setAttribute('src', videoSrc);
+        }, false);
+
+    }, false);
+  </script>
+  
+  <script>
+
+    function getTimeRemaining(endtime) {
+      var t = Date.parse(endtime) - Date.parse(new Date());
+      var seconds = Math.floor((t / 1000) % 60);
+      var minutes = Math.floor((t / 1000 / 60) % 60);
+      var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+      var days = Math.floor(t / (1000 * 60 * 60 * 24));
+      return {
+        'total': t,
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+      };
+    }
+
+    function initializeClock(id, endtime) {
+      var clock = document.querySelector(id);
+      var daysSpan = clock.querySelector('.days');
+      var hoursSpan = clock.querySelector('.hours');
+      var minutesSpan = clock.querySelector('.minutes');
+      var secondsSpan = clock.querySelector('.seconds');
+
+      function updateClock() {
+        var t = getTimeRemaining(endtime);
+
+        daysSpan.innerHTML = t.days;
+        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+        if (t.total <= 0) {
+          clearInterval(timeinterval);
+        }
+      }
+
+      updateClock();
+      var timeinterval = setInterval(updateClock, 1000);
+    }
+
+    var deadline = new Date('2016-11-07 23:59');
+    initializeClock('.timer', deadline);
+  </script>
+  <script src="js/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '.video-list',
+      data: {
+        modulos: [
+          { titulo: 'Frameworks: O que são?', n: 1 },
+          { titulo: 'Frameworks: Para que servem?', n: 2 },
+          { titulo: 'Frameworks: É possível fazer um layout sem eles?', n: 3 },
+          { titulo: 'Frameworks: Quais são os mais usados?', n: 4 },
+          { titulo: 'Instalando e configurando o Sublime', n: 5 },
+          { titulo: 'Requisitos de um framework', n: 6 },
+          { titulo: 'Emmet', n: 7 },
+          { titulo: 'HTML base', n: 8 },
+          { titulo: 'Arquivos CSS', n: 9 },
+          { titulo: 'CSS Básico', n: 10 },
+          { titulo: 'Estilos base', n: 11 },
+          { titulo: 'Grid', n: 12 },
+          { titulo: 'Media queries do grid', n: 13 },
+          { titulo: 'Tipografia', n: 14 },
+          { titulo: 'Links', n: 15 },
+          { titulo: 'Botões', n: 16 },
+          { titulo: 'Formulários', n: 17 },
+          { titulo: 'Listas', n: 18 },
+          { titulo: 'Código', n: 19 },
+          { titulo: 'Tabelas', n: 20 },
+          { titulo: 'Espaçamento', n: 21 },
+          { titulo: 'Utilidades', n: 22 },
+          { titulo: 'Imagens responsivas', n: 23 },
+          { titulo: 'Notas', n: 24 },
+          { titulo: 'Detalhes do projeto', n: 25 },
+          { titulo: 'Navegação responsiva', n: 26 },
+          { titulo: 'Header', n: 27 },
+          { titulo: 'Destaques', n: 28 },
+          { titulo: 'Galeria', n: 29 },
+          { titulo: 'Planos', n: 30 },
+          { titulo: 'Equipe', n: 31 },
+          { titulo: 'Rodapé', n: 32 },
+          { titulo: 'Finalização', n: 33 }
+        ]
+      }
+    });
+  </script>
+</body>
+</html>
