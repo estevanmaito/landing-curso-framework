@@ -38,7 +38,7 @@
 </head>
 <body>
   <div class="background">
-    <div class="timer">
+    <div class="timer" id="timer">
       <div>
         PREÇO DE LANÇAMENTO TERMINA EM 
         <div class="timer__days">
@@ -73,7 +73,7 @@
             <h2>É hora de melhorar seu CSS</h2>
             <p>Com foco na <strong>simplicidade</strong>, neste curso você vai criar um <strong>framework CSS</strong> e um site sem perder tempo!</p>
             <p>Juntos, vamos recriar o framework <strong><a href="https://estevanmaito.github.io/organico/" target="_blank">Orgânico CSS</a></strong>, uma ferramenta real para criar layouts responsivos. Além disso, vamos construir uma página completa com elementos como navegação, formulário, galeria e tabelas de preços.</p>
-            <p>Você pode <a href="https://github.com/estevanmaito/" target="_blank">ver o framework pronto</a>, <a href="amazon.co.uk" target="_blank">o site completo</a> ou <strong><a href="#comprar">inscrever-se no curso</a></strong> caso já esteja convencido.</p>
+            <p>Você pode <a href="https://estevanmaito.github.io/curso/organico.html" target="_blank">ver o framework pronto</a>, <a href="https://estevanmaito.github.io/curso" target="_blank">o site completo</a> ou <strong><a href="#comprar">inscrever-se no curso</a></strong> caso já esteja convencido.</p>
           </div>
         </section>
       </div>
@@ -86,7 +86,7 @@
         </div>
         <div class="nove colunas">
           <h2>Conheça o Estevan Maito</h2>
-          <p>Estevan Maito é desenvolvedor full stack, escritor e tem um canal no YouTube. Trabalha como desenvolvedor web independente, escreveu o livro <a href="http://cursocss.com.br" target="_blank">Curso de Framework CSS</a> e também cria <a href="https://youtube.com/estevanmaito" target="_blank">vídeos</a> sobre diversos temas que envolvem o desenvolvimento web, do front ao back end.</p>
+          <p>Estevan Maito é desenvolvedor full stack, escritor e tem um canal no YouTube. Trabalha como desenvolvedor web independente, escreveu o livro <a href="http://www.aprendahtmlecss.com.br" target="_blank">Aprenda HTML e CSS</a> e também cria <a href="https://youtube.com/estevanmaito" target="_blank">vídeos</a> sobre diversos temas que envolvem o desenvolvimento web, do front ao back end.</p>
           <a href="https://twitter.com/estevanmaito" class="twitter-follow-button" data-show-count="false">Follow @estevanmaito</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </section>
@@ -234,8 +234,8 @@
           var timeinterval = setInterval(updateClock, 1000);
         }
 
-        var deadline = new Date('2016-11-07 23:59');
-        initializeClock('.timer', deadline);
+        var deadline = new Date(2016,10,7,23,59);
+        initializeClock('#timer', deadline);
 
     }, false);
   </script>
