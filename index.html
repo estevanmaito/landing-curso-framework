@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
   <title>Curso de Framework CSS</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/organico.css">
@@ -12,7 +13,7 @@
   <meta name="description" content="Aprender HTML e CSS nunca foi tão fácil e prático. Comece a praticar desde o começo e crie projetos incríveis!">
   <meta name="robots" content="index">
   <meta name="author" content="Estevan Maito">
-  <link rel="canonical" href="http://www.cursocss.com.br">
+  <link rel="canonical" href="http://cursocss.com.br">
 
   <meta itemprop="name" content="Curso de Framework CSS">
   <meta itemprop="description" content="Melhore seu nível de CSS. Construa um framework CSS do zero, mais dois sites em apenas um curso!">
@@ -21,13 +22,13 @@
   <meta property="og:title" content="Curso de Framework CSS">
   <meta property="og:site_name" content="Curso de Framework CSS"/>
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://www.cursocss.com.br">
+  <meta property="og:url" content="http://cursocss.com.br">
   <meta property="og:image" content="http://www.cursocss.com.br/img/cover.png">
   <meta property="og:description" content="Melhore seu nível de CSS. Construa um framework CSS do zero, mais dois sites em apenas um curso!"/>
   <meta property="fb:app_id" content="193286677765287">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="http://www.cursocss.com.br">
+  <meta name="twitter:url" content="http://cursocss.com.br">
   <meta name="twitter:title" content="Curso de Framework CSS">
   <meta name="twitter:description" content="Melhore seu nível de CSS. Construa um framework CSS do zero, mais dois sites em apenas um curso!">
   <meta name="twitter:image" content="http://www.cursocss.com.br/img/cover.png">
@@ -194,53 +195,51 @@
             video.setAttribute('src', videoSrc);
         }, false);
 
+        function getTimeRemaining(endtime) {
+          var t = Date.parse(endtime) - Date.parse(new Date());
+          var seconds = Math.floor((t / 1000) % 60);
+          var minutes = Math.floor((t / 1000 / 60) % 60);
+          var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+          var days = Math.floor(t / (1000 * 60 * 60 * 24));
+          return {
+            'total': t,
+            'days': days,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+          };
+        }
+
+        function initializeClock(id, endtime) {
+          var clock = document.querySelector(id);
+          var daysSpan = clock.querySelector('.days');
+          var hoursSpan = clock.querySelector('.hours');
+          var minutesSpan = clock.querySelector('.minutes');
+          var secondsSpan = clock.querySelector('.seconds');
+
+          function updateClock() {
+            var t = getTimeRemaining(endtime);
+
+            daysSpan.innerHTML = t.days;
+            hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+            minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+            secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+            if (t.total <= 0) {
+              clearInterval(timeinterval);
+            }
+          }
+
+          updateClock();
+          var timeinterval = setInterval(updateClock, 1000);
+        }
+
+        var deadline = new Date('2016-11-07 23:59');
+        initializeClock('.timer', deadline);
+
     }, false);
   </script>
   
-  <script>
-
-    function getTimeRemaining(endtime) {
-      var t = Date.parse(endtime) - Date.parse(new Date());
-      var seconds = Math.floor((t / 1000) % 60);
-      var minutes = Math.floor((t / 1000 / 60) % 60);
-      var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-      var days = Math.floor(t / (1000 * 60 * 60 * 24));
-      return {
-        'total': t,
-        'days': days,
-        'hours': hours,
-        'minutes': minutes,
-        'seconds': seconds
-      };
-    }
-
-    function initializeClock(id, endtime) {
-      var clock = document.querySelector(id);
-      var daysSpan = clock.querySelector('.days');
-      var hoursSpan = clock.querySelector('.hours');
-      var minutesSpan = clock.querySelector('.minutes');
-      var secondsSpan = clock.querySelector('.seconds');
-
-      function updateClock() {
-        var t = getTimeRemaining(endtime);
-
-        daysSpan.innerHTML = t.days;
-        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-        if (t.total <= 0) {
-          clearInterval(timeinterval);
-        }
-      }
-
-      updateClock();
-      var timeinterval = setInterval(updateClock, 1000);
-    }
-
-    var deadline = new Date('2016-11-07 23:59');
-    initializeClock('.timer', deadline);
-  </script>
   <script src="js/vue.js"></script>
   <script>
     var app = new Vue({
@@ -283,6 +282,17 @@
         ]
       }
     });
+  </script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-85456238-1', 'auto');
+    ga('send', 'pageview');
+
   </script>
 </body>
 </html>
