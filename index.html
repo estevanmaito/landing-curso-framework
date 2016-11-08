@@ -38,14 +38,14 @@
 </head>
 <body>
   <div class="background">
-    <div class="timer" id="timer">
+    <!-- <div class="timer" id="timer">
       <div>
         PREÇO DE LANÇAMENTO TERMINA EM 
         <div class="timer__days">
           <span class="days"></span> : <span class="hours"></span> : <span class="minutes"></span> : <span class="seconds"></span>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="container">
       <section class="linha">
         <div class="doze colunas">
@@ -53,7 +53,6 @@
             <h5 class="curso__name--small">CURSO DE</h5>
             <div class="curso__container">
               <h1 class="curso__name">FRAMEWORK CSS</h1>
-              <span class="curso__lancamento">LANÇA.<br>7/NOV</span>
             </div>
             <h4 class="curso__destaque">Melhore seu nível de CSS</h4>
             <h4 class="curso__destaque">Construa um framework CSS do zero</h4>
@@ -148,8 +147,8 @@
           <li class="comprar__item">Código fonte de tudo</li>
           <li class="comprar__item">Acessível de qualquer dispositivo</li>
         </ul>
-        <a href="https://pay.hotmart.com/X4961824S" class="botao destacado laranja u-width-100 comprar__botao">COMPRAR | <span class="comprar__botao--strike">R$ 68</span> R$ 36</a>
-        <span class="comprar__expira">Preço de lançamento - expira em <strong>07-11-2016 23:59</strong></span>
+        <a href="https://pay.hotmart.com/X4961824S" class="botao destacado laranja u-width-100 comprar__botao">COMPRAR | R$ 68</a>
+        <!-- <span class="comprar__expira">Preço de lançamento - expira em <strong>07-11-2016 23:59</strong></span> -->
       </div>
     </div>
 
@@ -195,47 +194,47 @@
             video.setAttribute('src', videoSrc);
         }, false);
 
-        function getTimeRemaining(endtime) {
-          var t = Date.parse(endtime) - Date.parse(new Date());
-          var seconds = Math.floor((t / 1000) % 60);
-          var minutes = Math.floor((t / 1000 / 60) % 60);
-          var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-          var days = Math.floor(t / (1000 * 60 * 60 * 24));
-          return {
-            'total': t,
-            'days': days,
-            'hours': hours,
-            'minutes': minutes,
-            'seconds': seconds
-          };
-        }
+        // function getTimeRemaining(endtime) {
+        //   var t = Date.parse(endtime) - Date.parse(new Date());
+        //   var seconds = Math.floor((t / 1000) % 60);
+        //   var minutes = Math.floor((t / 1000 / 60) % 60);
+        //   var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        //   var days = Math.floor(t / (1000 * 60 * 60 * 24));
+        //   return {
+        //     'total': t,
+        //     'days': days,
+        //     'hours': hours,
+        //     'minutes': minutes,
+        //     'seconds': seconds
+        //   };
+        // }
 
-        function initializeClock(id, endtime) {
-          var clock = document.querySelector(id);
-          var daysSpan = clock.querySelector('.days');
-          var hoursSpan = clock.querySelector('.hours');
-          var minutesSpan = clock.querySelector('.minutes');
-          var secondsSpan = clock.querySelector('.seconds');
+        // function initializeClock(id, endtime) {
+        //   var clock = document.querySelector(id);
+        //   var daysSpan = clock.querySelector('.days');
+        //   var hoursSpan = clock.querySelector('.hours');
+        //   var minutesSpan = clock.querySelector('.minutes');
+        //   var secondsSpan = clock.querySelector('.seconds');
 
-          function updateClock() {
-            var t = getTimeRemaining(endtime);
+        //   function updateClock() {
+        //     var t = getTimeRemaining(endtime);
 
-            daysSpan.innerHTML = t.days;
-            hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-            minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-            secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+        //     daysSpan.innerHTML = t.days;
+        //     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+        //     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        //     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
-            if (t.total <= 0) {
-              clearInterval(timeinterval);
-            }
-          }
+        //     if (t.total <= 0) {
+        //       clearInterval(timeinterval);
+        //     }
+        //   }
 
-          updateClock();
-          var timeinterval = setInterval(updateClock, 1000);
-        }
+        //   updateClock();
+        //   var timeinterval = setInterval(updateClock, 1000);
+        // }
 
-        var deadline = new Date(2016,10,7,23,59);
-        initializeClock('#timer', deadline);
+        // var deadline = new Date(2016,10,7,23,59);
+        // initializeClock('#timer', deadline);
 
     }, false);
   </script>
